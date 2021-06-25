@@ -1,0 +1,43 @@
+Name: Sebastian Joseph
+
+Project: Intelligent Scissoring with Alpha Matting
+
+Requirements:
+        - Python 3.x
+        - OpenCV for Python
+        - Numpy
+
+Files:
+        - pyscissors.py: main python script to run
+        - matte.py: this file contains the code for the alpha matting process
+        - orchard_bouman_clust.py: this file contains an implementation of
+          orchard-bouman clustering which is used by bayesian matting
+
+Details: 
+
+To run the program, call "python3 pyscissors.py <image file>"
+
+Intelligent scissoring is done in this project through the GUI window that pops up after
+costs have calculated.
+      - Left-click to seed pixels
+      - Drag to create path
+
+After a cycle has been created (starting seed pixel meets ending seed pixel) press c to create a cut.
+
+After the cut has been created, a trimap and an alpha matte is created, which is stored in the working directory as:
+      - trimap.jpg
+      - alpha_matte.jpg
+
+After this, the user has the option to composite this foreground image to a background of their choice.
+For this, the program will prompt for some input. Follow direction to get a composited images.
+
+The composited image is stored as composite.jpg in the current working directory.
+
+All code was written by me except for one file: orchard_bouman_clust.py
+
+This file is from MarcoForte's implementation of Bayesian Matting:
+
+His work can be found at: github.com/MarcoForte/bayesian-matting
+
+
+ 
